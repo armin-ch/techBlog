@@ -1,0 +1,32 @@
+{
+  "name": "techBlog",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/armin-ch/techBlog.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/armin-ch/techBlog/issues"
+  },
+  "homepage": "https://github.com/armin-ch/techBlog#readme",
+  "dependencies": {
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "express-handlebars": "^5.3.2",
+    "heroku": "^7.54.1",
+    "mysql2": "^2.2.5",
+    "passport": "^0.4.1",
+    "passport-jwt": "^4.0.0",
+    "passport-local-sequelize": "^0.9.0",
+    "sequelize": "^6.6.2"
+  }
+}
