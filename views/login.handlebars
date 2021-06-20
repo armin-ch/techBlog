@@ -7,12 +7,25 @@
     <label for="password" class="form-label">Password</label>
     <input type="password" class="form-control" id="password">
   </div>
-  <button type="submit" class="btn btn-primary">Login</button>
+  <button id="login" type="submit" class="btn btn-primary">Login</button>
   <br/>
   <a href="/users/register">sign up here</a>
 </form>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"
   integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 <script>
-  
+  $('#login').click(event=>{
+    event.preventDefault()
+    $.post('/api/users/login', {
+      username: $('#username').val(),
+      password: $('#password').val()
+    }, token => {
+      if (token) {
+        localStorage.setItem('token', token)
+        window.location = '/'
+      } else {
+        alert('Invalid username or password')
+      }
+    })
+  })
 </script>
