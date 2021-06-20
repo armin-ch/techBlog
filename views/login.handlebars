@@ -22,7 +22,8 @@
     }, token => {
       if (token) {
         localStorage.setItem('token', token)
-        window.location = '/'
+        window.location = '/home'
+        console.log('login successful!')
       } else {
         alert('Invalid username or password')
       }
