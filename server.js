@@ -28,13 +28,13 @@ passport.deserializeUser((id, done) => {
 
 app.engine('handlebars', expresshbs({
   defaultLayout:"main"
-})); 
+}))
 app.set('view engine', 'handlebars');
 
 passport.use(new JWTStrategy({
   jwtFromRequest: ExtractJwt.fromAuthHeaderAsBearerToken(),
   secretOrKey: process.env.SECRET
-}, ({ id }, cb) => User.findOne({ where: { id } })
+}, ({ id }, cb) => User.findOne({ where: { id }})
   .then(user => cb(null, user))
   .catch(err => cb(err))))
 

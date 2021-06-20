@@ -4,4 +4,4 @@ module.exports = new Sequelize(process.env.JAWSDB_URL || process.env.LOCALDB_NAM
   host: 'localhost',
   dialect: 'mysql',
   port: 3306
-});
+})
