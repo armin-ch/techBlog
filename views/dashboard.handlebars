@@ -1,0 +1,19 @@
+<main class="container"></main>
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"
+  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<script>
+  axios.get('/posts')
+  .then(posts=>{
+    console.log(posts)
+    for(let i=0; i<posts.data.length;i++){
+      let elem = $(`
+      <div class="row border">
+        <h2>${posts.data[i].title}</h2>
+        <p>${posts.data[i].text}</p>
+      </div>
+      `)
+      $('main').append(elem)
+    }
+  })
+</script>

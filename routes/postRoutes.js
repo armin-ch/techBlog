@@ -1,9 +1,14 @@
 const router = require('express').Router()
 const { Post } = require('../models')
 const passport = require('passport')
+const mysql = require('mysql2')
+const db = mysql.createConnection('mysql://root:rootroot@localhost:3306/techblog_db')
 
-router.get('/posts', passport.authenticate('jwt'), (req, res) => {
-  res.json(req.user.posts)
+router.get('/posts', (req, res) => {
+  db.query('SELECT * FROM posts', (err,posts)=>{
+    if (err) {console.log(err)}
+    res.json(posts)
+  })
 })
 
 router.post('/posts', passport.authenticate('jwt'), (req, res) => Post.create({

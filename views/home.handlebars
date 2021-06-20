@@ -23,7 +23,11 @@
         'Authorization': `Bearer ${localStorage.getItem('token')}`
       }
     })
-    .then(res=>{console.log('post created')})
+    .then(res=>{
+      console.log('post created')
+      document.getElementById('text').value = ''
+      document.getElementById('title').value = ''
+      })
     .catch(err => window.location = '/users/login')
   })
 </script>
