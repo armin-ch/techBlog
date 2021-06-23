@@ -12,7 +12,7 @@ router.get('/logout', (req, res) => {
   res.render('logout')
 })
 
-router.get('/home', (req, res) => {
+router.get('/', (req, res) => {
   res.render('home')
 })
 
