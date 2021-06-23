@@ -5,10 +5,16 @@ const mysql = require('mysql2')
 const db = mysql.createConnection(process.env.JAWSDB_URL || process.env.LOCALDB_URL)
 
 router.get('/posts', (req, res) => {
-  db.query('SELECT * FROM posts', (err,posts)=>{
-    if (err) {console.log(err)}
-    res.json(posts)
-  })
+    Post.findAll({})
+      .then(posts => { 
+        console.log(posts); 
+        res.json(posts)
+      })
+      .catch(err => console.log(err));
+  // db.query('SELECT * FROM posts', (err,posts)=>{
+  //   if (err) {console.log(err)}
+  //   res.json(posts)
+  // })
 })
 
 router.post('/posts', passport.authenticate('jwt'), (req, res) => Post.create({
