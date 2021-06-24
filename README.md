@@ -1,5 +1,9 @@
 # techBlog
 
+## Description
+
+This is a CMS-style blog site similar to a Wordpress site, where developers can create an account, login using encrypted passwords, and publish blog posts for other users to see.
+
 ## Installation
 
 This app requires the following npm modules:
@@ -10,4 +14,5 @@ This app requires the following npm modules:
 * [dotenv package](https://www.npmjs.com/package/dotenv) to use environment variables.
 * [passport package](https://www.npmjs.com/package/passport) to hash passwords. 
 * [connect-session-sequelize](https://www.npmjs.com/package/connect-session-sequelize) package to add authentication.
+* [express-handlebars](https://www.npmjs.com/package/express-handlebars) package to implement Handlebars.js for your Views.
 
