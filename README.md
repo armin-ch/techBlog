@@ -16,3 +16,7 @@ This app requires the following npm modules:
 * [connect-session-sequelize](https://www.npmjs.com/package/connect-session-sequelize) package to add authentication.
 * [express-handlebars](https://www.npmjs.com/package/express-handlebars) package to implement Handlebars.js for your Views.
 
+## Deployed Site
+
+The [deployed site](https://aqueous-springs-67175.herokuapp.com/) on heroku.
+
