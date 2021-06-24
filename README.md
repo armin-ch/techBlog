@@ -2,7 +2,7 @@
 
 ## Description
 
-This is a CMS-style blog site similar to a Wordpress site, where developers can create an account, login using encrypted passwords, and publish blog posts for other users to see.
+This is a CMS-style blog site similar to a Wordpress site, where developers can create an account, login using encrypted passwords, and publish blog posts for other users to see. The front end is very basic bootstrap, most of the code is backend functionality.
 
 ## Installation
 
